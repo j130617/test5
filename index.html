@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<div ng-controller="MyCtrl">
+  <div>
+    <select ng-model="selectData">
+      <option value="data1">data 1</option>
+      <option value="data2">data 2</option>
+      <option value="data3">data 3</option>
+    </select>
+  </div>
+  <div>
+    {{selectData}}
+    <waterfall chart-data="chartData" select-data="selectData"></waterfall>
+  </div>
+</div>
