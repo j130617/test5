@@ -60,7 +60,7 @@ d3.tsv("data.tsv", type, function(error, data) {
       .data(data)
     .enter().append("rect")
       .attr("class", function(d) { return "bar bar--" + (d.value < 0 ? "negative" : "positive"); })
-      .attr("y", function(d) { return y(Math.min(0, d.value)); })
+      .attr("y", function(d) { return y(Math.max(0, d.value)); })
       .attr("x", function(d) { return x(d.name); })
       .attr("width", function(d) { return Math.abs(y(d.value) - x(0)); })
       .attr("height", x.rangeBand());
